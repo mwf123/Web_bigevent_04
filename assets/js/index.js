@@ -40,12 +40,12 @@ function getUserInfo() {
 function renderAvatar(user) {
     // 1.渲染名称
     var name = user.nickname || user.username;
-    $('#welcome').html('欢迎' + name);
+    $('#welcome').html('欢迎 &nbsp;' + name);
     // 渲染头像
     if (user.user_pic !== null) {
         // 有头像
         $('.layui-nav-img').show().attr('src', user.user_pic);
-        $('#welcome').hide();
+        $('.text_avatar').hide();
     } else {
         // 没有头像
         $('.layui-nav-img').hide();
