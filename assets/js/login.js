@@ -69,7 +69,7 @@ $(function () {
             data: $(this).serialize(),
             success: function (res) {
                 // 返回校验状态
-                if (res.status !== 0) return layer.msg(res.meassage);
+                if (res.status !== 0) return layer.msg("登录失败！");
                 // 提示信息，保存 token 跳转页面
                 layer.msg('恭喜您登录成功！')
                 // 保存 token 未来接口要使用
